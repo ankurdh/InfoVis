@@ -1,0 +1,37 @@
+[
+			{
+				name: "dummy",
+				x: 0,
+				y:0
+			},
+			{
+				name: "Graphics",
+				x : 550,
+				y : 200
+			},
+			{
+				name: "Visualization",
+				x: 250,
+				y: 200
+			},
+			{
+				name: "Intelligence",
+				x: 300,
+				y: 300
+			},
+			{
+				name: "Databases",
+				x: 500,
+				y: 300
+			},
+			{
+				name: "Networks",
+				x: 300,
+				y: 100
+			},
+			{
+				name: "Game Design",
+				x: 500,
+				y: 100
+			}
+			]
