@@ -19,6 +19,21 @@
 			  if (error) return console.warn(error);
 				console.log(json.dept);
 
+				var fromX = json.deptx,
+					fromY = json.depty;
+
+
+			  svg.selectAll("line")
+			  	.data(json.conc)
+			  	.enter()
+				.append("line")
+			  	.attr("x1", fromX)
+                .attr("y1", fromY)
+                .attr("x2", function(d){return d.x;})
+                .attr("y2", function(d){return d.y;})
+                .attr("stroke-width", 2)
+                .attr("stroke", "black");
+
 			  svg.append("ellipse")
 			  	.attr("cx", json.deptx)
 			  	.attr("cy", json.depty)
@@ -48,7 +63,20 @@
 				.attr("ry", 20)
 				.style("stroke", "blue")
 				.style("fill", "white");
+
+				svg.selectAll("text")
+					.data(json.conc)
+					.enter()
+					.append("text")
+					.text(function(d){return d.name;})
+					.attr("x", function(d){return d.x-10;})
+					.attr("y", function(d){return d.y;})
+				 	.attr("font-family", "sans-serif")
+					.attr("font-size", "10px")
+			    	.attr("fill", "black");
 			});
+
+
 
 			console.log(data);
 
